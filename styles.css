@@ -1,0 +1,213 @@
+
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #1f1f1f;
+  --border-light: #e5e7eb;
+  --border-dark: #333;
+  --text-light: #1f2937;
+  --text-dark: #e5e7eb;
+}
+
+body.light {
+  background: #f1f5f9;
+  color: var(--text-light);
+}
+
+body.dark {
+  background: #0f172a;
+  color: var(--text-dark);
+}
+
+.app {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg-light);
+  padding: 16px 22px;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+body.dark header {
+  background: var(--card-bg-dark);
+  border: 1px solid var(--border-dark);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+header button {
+  padding: 10px 18px;
+  background: var(--primary);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header button:hover {
+  background: var(--primary-dark);
+}
+
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.tabs button:hover {
+  background: #cbd5e1;
+}
+
+.tabs .active {
+  background: var(--primary);
+  color: white;
+}
+
+body.dark .tabs button {
+  background: #1e293b;
+  color: white;
+}
+
+body.dark .active {
+  background: var(--primary-dark);
+}
+
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  font-size: 16px;
+  background: #fff;
+}
+
+body.dark .search-box input {
+  background: #1e293b;
+  border: 1px solid var(--border-dark);
+  color: white;
+}
+
+.search-box button {
+  padding: 10px 16px;
+  background: var(--primary);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: var(--primary-dark);
+}
+
+
+.history-box {
+  background: var(--card-bg-light);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  margin-bottom: 20px;
+}
+
+body.dark .history-box {
+  background: var(--card-bg-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.history-box h4 {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.history-box ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.card {
+  padding: 18px;
+  margin: 14px 0;
+  background: var(--card-bg-light);
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+body.dark .card {
+  background: var(--card-bg-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.card h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  background: var(--primary);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: gray;
+}
